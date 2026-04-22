@@ -46,11 +46,28 @@ export const translations = {
     // Practice Page
     practiceTitle: 'Practice',
     comingSoon: 'Practice feature coming soon!',
-    noLanguagesHint: 'Add some languages and words first to start practicing.',
-    
+    noLanguagesHint: 'Add at least 2 words to a language to start practicing.',
+    selectLanguageToPractice: 'Choose a language to practice',
+    whatIsTheDefinition: 'What is the definition of…',
+    correct: 'Correct',
+    wrong: 'Wrong',
+    nextQuestion: 'Next →',
+    seeResults: 'See Results',
+    needsWork: 'Needs work',
+    wellDone: 'Well done',
+    viewStats: 'View Stats',
+    practiceAgain: 'Practice Again',
+    backToMenu: 'Back to Menu',
+    backToResults: 'Back to Results',
+    statsFor: 'Stats for',
+    noPracticeYet: 'No practice sessions yet for this language.',
+    notEnoughWords: 'You need at least 2 words to practice.',
+    practiceLoadError: 'Failed to load practice words. Please try again.',
+    new: 'New',
+
     // Errors
     errorPrefix: 'Failed to load languages. Make sure the server is running.',
-    
+
     // UI Language Selector
     uiLanguage: 'Language'
   },
@@ -100,11 +117,28 @@ export const translations = {
     // Practice Page
     practiceTitle: 'Practicar',
     comingSoon: '¡Función de práctica próximamente!',
-    noLanguagesHint: 'Añade algunos idiomas y palabras primero para empezar a practicar.',
-    
+    noLanguagesHint: 'Añade al menos 2 palabras a un idioma para empezar a practicar.',
+    selectLanguageToPractice: 'Elige un idioma para practicar',
+    whatIsTheDefinition: '¿Cuál es la definición de…',
+    correct: 'Correcto',
+    wrong: 'Incorrecto',
+    nextQuestion: 'Siguiente →',
+    seeResults: 'Ver Resultados',
+    needsWork: 'Necesita repaso',
+    wellDone: '¡Bien hecho!',
+    viewStats: 'Ver Estadísticas',
+    practiceAgain: 'Practicar de nuevo',
+    backToMenu: 'Volver al Menú',
+    backToResults: 'Volver a Resultados',
+    statsFor: 'Estadísticas de',
+    noPracticeYet: 'Todavía no hay sesiones de práctica para este idioma.',
+    notEnoughWords: 'Necesitas al menos 2 palabras para practicar.',
+    practiceLoadError: 'Error al cargar palabras. Inténtalo de nuevo.',
+    new: 'Nueva',
+
     // Errors
     errorPrefix: 'Error al cargar idiomas. Asegúrate de que el servidor esté ejecutándose.',
-    
+
     // UI Language Selector
     uiLanguage: 'Idioma'
   }

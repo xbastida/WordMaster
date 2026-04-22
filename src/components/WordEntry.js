@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './WordEntry.css';
 import { useLanguage } from '../contexts/LanguageContext';
 import { lookupWord, formatDefinition, lookupWordFreeDictionary } from '../services/dictionaryService';
+import { logLookup } from '../api';
 
 function WordEntry({ language, onAddWord, onBack }) {
   const [word, setWord] = useState('');
@@ -27,11 +28,14 @@ function WordEntry({ language, onAddWord, onBack }) {
       
       if (definition) {
         setTranslation(definition);
+        // Log the successful lookup
+        logLookup(word.trim(), language.id);
       } else {
         // Try Free Dictionary API as backup
         try {
           const freeDictDefinition = await lookupWordFreeDictionary(word.trim());
           setTranslation(freeDictDefinition);
+          logLookup(word.trim(), language.id);
         } catch (backupError) {
           setLookupError(t('noDefinitionFound'));
         }
@@ -42,6 +46,7 @@ function WordEntry({ language, onAddWord, onBack }) {
         const freeDictDefinition = await lookupWordFreeDictionary(word.trim());
         setTranslation(freeDictDefinition);
         setLookupError('');
+        logLookup(word.trim(), language.id);
       } catch (backupError) {
         if (error.message.includes('API key')) {
           setLookupError(t('apiKeyMissing'));
